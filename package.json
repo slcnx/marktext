@@ -182,7 +182,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:marktext/marktext.git"
+    "url": "git@github.com:slcnx/marktext.git"
   },
   "bugs": {
     "url": "https://github.com/marktext/marktext/issues"
@@ -209,7 +209,7 @@
         {
             "provider": "github",
             "owner": "slcnx",
-            "repo": "https://github.com/slcnx/marktext.git"
+            "repo": "marktext"
         }
     ]
 }
