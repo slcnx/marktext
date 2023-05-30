@@ -203,5 +203,14 @@
       "email": "hfelix@protonmail.ch",
       "url": "https://github.com/fxha"
     }
-  ]
+  ],
+  "build": {
+    "publish": [
+        {
+            "provider": "github",
+            "owner": "slcnx",
+            "repo": "https://github.com/slcnx/marktext.git"
+        }
+    ]
+}
 }
