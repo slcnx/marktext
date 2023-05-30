@@ -107,16 +107,12 @@ jobs:
         shell: bash
 
 
-      - uses: actions/download-artifact@v3
-        id: download
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-
-      - name: Display structure of downloaded files
-        run: ls -R build\marktext-*
-
-      - name: 'Echo download path'
-        run: echo ${{steps.download.outputs.download-path}}
+          path: build
 
   windows:
     runs-on: windows-latest
@@ -188,13 +184,8 @@ jobs:
           get-filehash -Algorithm SHA256 "build\marktext-*-win.zip"
         shell: pwsh
 
-      - uses: actions/download-artifact@v3
-        id: download
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-
-      - name: Display structure of downloaded files
-        run: ls -R build\marktext-*
-
-      - name: 'Echo download path'
-        run: echo ${{steps.download.outputs.download-path}}
+          path: build
