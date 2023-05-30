@@ -1,0 +1,110 @@
+/* 页面重置 */
+#ag-editor-id {
+  counter-reset: h1;
+}
+h1 {
+  counter-reset: h2;
+}
+h1 .ag-paragraph::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+
+h2 {
+  counter-reset: h3;
+}
+h2 .ag-paragraph::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+
+
+
+h3 {
+  counter-reset: h4;
+}
+h3 .ag-paragraph::before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+
+
+h4 {
+  counter-reset: h5;
+}
+h4 .ag-paragraph::before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) ". ";
+}
+
+
+h5 {
+  counter-reset: h6;
+}
+h5 .ag-paragraph::before {
+  counter-increment: h5;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+
+
+h6 .ag-paragraph::before {
+  counter-increment: h6;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ".";
+}
+
+
+/* TOC重置 */
+
+.side-bar-toc {
+  counter-reset: h1;
+}
+/*h1*/
+.side-bar-toc  > .el-tree > [role="treeitem"] {
+  counter-reset: h2;
+}
+.side-bar-toc  > .el-tree > [role="treeitem"] > .el-tree-node__content > .el-tree-node__label::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+/*h2*/
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   {
+  counter-reset: h3;
+}
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__content >  .el-tree-node__label::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+
+
+/*H3*/
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]   {
+  counter-reset: h4;
+}
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"] > .el-tree-node__content >  .el-tree-node__label::before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+
+/*h4*/
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]  {
+  counter-reset: h5;
+}
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]  >  .el-tree-node__children > [role="treeitem"]  > .el-tree-node__content >  .el-tree-node__label::before  {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) ". ";
+}
+
+/*H5*/
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"] {
+  counter-reset: h6;
+}
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"] > .el-tree-node__children > [role="treeitem"] > .el-tree-node__content >  .el-tree-node__label::before  {
+  counter-increment: h5;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+
+/*h6*/
+.side-bar-toc  > .el-tree > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"]   > .el-tree-node__children > [role="treeitem"]  > .el-tree-node__children > [role="treeitem"] > .el-tree-node__children > [role="treeitem"] > .el-tree-node__children > [role="treeitem"]  >  .el-tree-node__content >  .el-tree-node__label::before  {
+  counter-increment: h6;
+  content: counter(h1) "." counter(h2) "."  counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ".";
+}
