@@ -4,7 +4,7 @@
   "homepage": "https://github.com/slcnx/marktext/",
   "description": "Next generation markdown editor",
   "license": "MIT",
-  "main": "./dist/electron/main.js",
+  "main": ".electron-vue/dev-runner.js",
   "scripts": {
     "release": "echo 'Please run \"build\" or \"release:{linux,mac,win}\"' && exit 1",
     "release:linux": "node .electron-vue/build.js && electron-builder build --linux",
