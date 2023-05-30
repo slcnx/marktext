@@ -40,6 +40,7 @@ import { addElementStyle } from '@/util/theme'
 
 import './assets/styles/index.css'
 import './assets/styles/printService.css'
+import './assets/styles/my.css'
 
 // -----------------------------------------------
 
