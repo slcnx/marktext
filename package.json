@@ -205,6 +205,15 @@
     }
   ],
   "build": {
+      "win": {
+            "publish": ["github"]
+          },
+      "linux": {
+            "publish": ["github"]
+          },
+          "mac": {
+            "publish": ["github"]
+          },
     "publish": [
         {
             "provider": "github",
