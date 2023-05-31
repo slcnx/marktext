@@ -203,24 +203,5 @@
       "email": "hfelix@protonmail.ch",
       "url": "https://github.com/fxha"
     }
-  ],
-  "build": {
-      "win": {
-            "publish": ["github"]
-          },
-      "linux": {
-            "publish": ["github"]
-          },
-          "mac": {
-            "publish": ["github"]
-          },
-    "publish": [
-        {
-            "provider": "github",
-            "owner": "slcnx",
-            "repo": "marktext",
-            "releaseType": "release"
-        }
-    ]
-}
+  ]
 }

@@ -74,6 +74,13 @@ fileAssociations:
   description: "Markdown document"
   role: "Editor"
   icon: "../resources/icons/md.icns"
+
+extends: null
+publish:
+- provider: "github"
+  owner: "slcnx"
+  repo: "marktext"
+  releaseType: "release"
 mac:
   artifactName: "marktext-${arch}-mac.${ext}"
   icon: "resources/icons/icon.icns"
@@ -83,6 +90,8 @@ mac:
       arch: [x64, arm64]
     - target: zip
       arch: [x64, arm64]
+  publish: 
+  - "github"
 dmg:
   artifactName: "marktext-${arch}.${ext}"
   contents:
@@ -93,6 +102,8 @@ dmg:
   - x: 130
     y: 240
     type: "file"
+  publish: 
+  - "github"
 win:
   artifactName: "marktext-${arch}-win.${ext}"
   icon: "resources/icons/icon.ico"
@@ -102,12 +113,18 @@ win:
   - target: "zip"
     arch: [ia32, x64]
   requestedExecutionLevel: "asInvoker"
+  publish: 
+  - "github"
+  
+ 
 nsis:
   artifactName: "marktext-setup.${ext}"
   perMachine: false
   oneClick: false
   allowToChangeInstallationDirectory: true
   include: "resources/windows/installer.nsh"
+  publish: 
+  - "github"
 linux:
   artifactName: "marktext-${arch}.${ext}"
   executableName: "marktext"
@@ -145,6 +162,8 @@ linux:
   - ext: "mdtext"
     name: "Markdown"
     description: "Markdown document"
+  publish: 
+  - "github"
 deb:
   # Custom dependencies:
   depends:
@@ -158,6 +177,8 @@ deb:
   fpm:
   # Expat := MIT like
   - "--license=Expat"
+  publish: 
+  - "github"
 rpm:
   # Custom dependencies:
   depends:
@@ -168,3 +189,5 @@ rpm:
   - "libxkbfile"
   # fontmanager
   - "fontconfig"
+  publish: 
+  - "github"
